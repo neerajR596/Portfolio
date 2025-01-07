@@ -1,0 +1,19 @@
+<%- include('partials/header') %>
+<link rel="stylesheet" href="/css/style.css">
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <% if (req.query.success === 'true') { %>
+        <p>Message sent successfully!</p>
+    <% } else if (req.query.success === 'false') { %>
+        <p>Failed to send the message. Try again.</p>
+    <% } %>
+    <form action="/contact" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+<%- include('partials/footer') %>

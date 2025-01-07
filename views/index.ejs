@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">MyPortfolio</div>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Hi, I'm Neeraj, a passionate full-stack developer with expertise in Node.js, Express, MongoDB, and more!</p>
+        <a href="#contact" class="btn">Get in Touch</a>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I have 6 months of experience in Node.js and related technologies. I love building web applications that solve real-world problems.
+        </p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="/images/project1.jpg" alt="Project 1">
+                <h3>Project One</h3>
+                <p>Login and Log out</p>
+                <a href="#" target="_blank">View Project</a>
+            </div>
+            <div class="project-card">
+                <img src="/images/project2.jpg" alt="Project 2">
+                <h3>Project Two</h3>
+                <p>Form of submitting</p>
+                <a href="#" target="_blank">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Node.js</li>
+            <li>Express.js</li>
+            <li>MongoDB</li>
+            <li>Mongoose</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+    </section>
+
+    <section id="testimonials">
+        <h2>What People Say</h2>
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <p>"[Your Name] delivered exceptional work and exceeded our expectations!"</p>
+                <h4>- Client A</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"Amazing developer with a keen eye for detail."</p>
+                <h4>- Client B</h4>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog">
+        <h2>Recent Blog Posts</h2>
+        <div class="blog-container">
+            <div class="blog-post">
+                <h3>Understanding Node.js Event Loop</h3>
+                <p>A deep dive into how Node.js handles asynchronous operations.</p>
+                <a href="#" target="_blank">Read More</a>
+            </div>
+            <div class="blog-post">
+                <h3>Express.js Best Practices</h3>
+                <p>Tips and tricks for building robust Express applications.</p>
+                <a href="#" target="_blank">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="/contact" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 [Neeraj]. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="https://github.com/neerajR596" target="_blank">GitHub</a> |
+            <a href="https://www.linkedin.com/in/neeraj-rana-0b6a50318/" target="_blank">LinkedIn</a> |
+            <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
+        </div>
+    </footer>
+</body>
+</html>
