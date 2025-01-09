@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">MyPortfolio</div>
+            <div class="logo-section">
+                <h1 class="logo-title">NR</h1>
+            </div>
             <ul>
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -30,10 +34,22 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p>
-            I have 6 months of experience in Node.js and related technologies. I love building web applications that solve real-world problems.
-        </p>
+        <div class="about-container">
+            <div class="about-image">
+                <img src="https://source.unsplash.com/300x300/?developer,profile" alt="About Me">
+            </div>
+            <div class="about-text">
+                <p>
+                    Hello! I'm a passionate web developer who loves crafting beautiful and functional websites. With a strong background in modern web technologies and a knack for problem-solving, I strive to create impactful solutions that deliver great user experiences.
+                </p>
+                <p>
+                    In my journey as a developer, I have worked with Nodejs, HTML, CSS, JavaScript, and various frameworks. When I'm not coding, you can find me exploring new technologies, solving puzzles, or enjoying a good book.
+                </p>
+                <a href="#contact">Get in Touch</a>
+            </div>
+        </div>
     </section>
+    
 
     <section id="projects">
         <h2>Projects</h2>
@@ -55,16 +71,37 @@
 
     <section id="skills">
         <h2>Skills</h2>
-        <ul>
-            <li>Node.js</li>
-            <li>Express.js</li>
-            <li>MongoDB</li>
-            <li>Mongoose</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-        </ul>
+        <p>
+            Proficient in modern web development tools and technologies, with expertise in back-end frameworks, front-end design, and database management.
+        </p>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <i class="skill-icon icon-html fab fa-html5"></i>
+                <p>HTML</p>
+            </div>
+            <div class="skill-item">
+                <i class="skill-icon icon-css fab fa-css3-alt"></i>
+                <p>CSS</p>
+            </div>
+            <div class="skill-item">
+                <i class="skill-icon icon-js fab fa-js-square"></i>
+                <p>JavaScript</p>
+            </div>
+            <div class="skill-item">
+                <i class="skill-icon icon-node fab fa-node"></i>
+                <p>Node.js</p>
+            </div>
+            <div class="skill-item">
+                <i class="skill-icon icon-express fas fa-server"></i>
+                <p>Express.js</p>
+            </div>
+            <div class="skill-item">
+                <i class="skill-icon icon-mongodb fas fa-database"></i>
+                <p>MongoDB</p>
+            </div>
+        </div>
     </section>
+    
 
     <section id="testimonials">
         <h2>What People Say</h2>
@@ -97,22 +134,20 @@
     </section>
 
     <section id="contact">
-        <h2>Contact Me</h2>
-        <form action="/contact" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 [Neeraj]. All Rights Reserved.</p>
-        <div class="social-links">
-            <a href="https://github.com/neerajR596" target="_blank">GitHub</a> |
-            <a href="https://www.linkedin.com/in/neeraj-rana-0b6a50318/" target="_blank">LinkedIn</a> |
-            <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
+        <h2>Contact Form</h2>
+        <div class="contact-wrapper">
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <p><i class="fas fa-phone-alt"></i> +91 9971767337</p>
+                <p><i class="fas fa-envelope"></i> rananeeraj596@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Delhi, INDIA</p>
+            </div>
         </div>
-    </footer>
+    </section>
 </body>
 </html>
