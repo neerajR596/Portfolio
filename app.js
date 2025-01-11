@@ -17,32 +17,32 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 // Route for Contact Form Submission
-app.post('/contact', async (req, res) => {
-    const { name, email, message } = req.body;
+// app.post('/contact', async (req, res) => {
+//     const { name, email, message } = req.body;
 
-    try {
-        const transporter = nodemailer.createTransport({
-            service: 'gmail',
-            auth: {
-                user: process.env.EMAIL_USER,
-                pass: process.env.EMAIL_PASS,
-            },
-        });
+//     try {
+//         const transporter = nodemailer.createTransport({
+//             service: 'gmail',
+//             auth: {
+//                 user: process.env.EMAIL_USER,
+//                 pass: process.env.EMAIL_PASS,
+//             },
+//         });
 
-        const mailOptions = {
-            from: email, // Sender's email
-            to: process.env.EMAIL_USER, // Your email
-            subject: `New message from ${name}`,
-            text: message,
-        };
+//         const mailOptions = {
+//             from: email, // Sender's email
+//             to: process.env.EMAIL_USER, // Your email
+//             subject: `New message from ${name}`,
+//             text: message,
+//         };
 
-        await transporter.sendMail(mailOptions);
-        res.send('Your message has been sent successfully!');
-    } catch (error) {
-        console.error('Error sending email:', error);
-        res.status(500).send('An error occurred. Please try again later.');
-    }
-});
+//         await transporter.sendMail(mailOptions);
+//         res.send('Your message has been sent successfully!');
+//     } catch (error) {
+//         console.error('Error sending email:', error);
+//         res.status(500).send('An error occurred. Please try again later.');
+//     }
+// });
 
 // Routes
 app.use('/', require('./routes/index'));
