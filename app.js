@@ -3,21 +3,23 @@ const mongoose = require('mongoose');
 const nodemailer = require('nodemailer');
 const path = require('path');
 require('dotenv').config();
-const baseURL = process.env.BASE_URL;
-console.log(baseURL); // https://neerajrana.netlify.app/
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// View Engine Setup
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+
+// Route for Contact Form Submission
 app.post('/contact', async (req, res) => {
     const { name, email, message } = req.body;
-    
+
     try {
         const transporter = nodemailer.createTransport({
             service: 'gmail',
@@ -28,10 +30,10 @@ app.post('/contact', async (req, res) => {
         });
 
         const mailOptions = {
-            from: email, 
-            to: process.env.EMAIL_USER, 
+            from: email, // Sender's email
+            to: process.env.EMAIL_USER, // Your email
             subject: `New message from ${name}`,
-            text: message, 
+            text: message,
         };
 
         await transporter.sendMail(mailOptions);
@@ -42,7 +44,11 @@ app.post('/contact', async (req, res) => {
     }
 });
 
+// Routes
 app.use('/', require('./routes/index'));
 app.use('/contact', require('./routes/contact'));
 
-app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));
+// Start the Server
+app.listen(PORT, () => {
+    console.log(`Server running at ${process.env.BASE_URL} or http://localhost:${PORT}`);
+});
