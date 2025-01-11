@@ -13,14 +13,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
-
-mongoose.connect(process.env.MONGO_URI, {})
-    .then(() => console.log('MongoDB Connected'))
-    .catch(err => console.error(err));
-
 app.post('/contact', async (req, res) => {
     const { name, email, message } = req.body;
-
+    
     try {
         const transporter = nodemailer.createTransport({
             service: 'gmail',
