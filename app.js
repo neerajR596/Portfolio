@@ -46,7 +46,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 // Routes
 app.use('/', require('./routes/index'));
-app.use('/contact', require('./routes/contact'));
+// app.use('/contact', require('./routes/contact'));
 
 // Start the Server
 app.listen(PORT, () => {
