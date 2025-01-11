@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const nodemailer = require('nodemailer');
 const path = require('path');
 require('dotenv').config();
+const baseURL = process.env.BASE_URL;
+console.log(baseURL); // https://neerajrana.netlify.app/
 
 const app = express();
 const PORT = process.env.PORT || 3000;
